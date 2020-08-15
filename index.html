@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="Easily create motivational letters in French to find a job that suits your wishes and needs">
+        <meta name="author" content="Tuckle">
+
+        <title>Créer Lettre</title>
+        <script type="text/javascript">
+            function preloader(){
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                refreshLettre("content")
+            }//preloader
+            window.onload = preloader;
+        </script>
+        <!-- Bootstrap Core CSS -->
+        <link href="res/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="res/css/animate.css" rel="stylesheet" type="text/css">
+        <link href="res/css/style.css" rel="stylesheet" type="text/css">
+
+        <!-- Fonts -->
+        <link href="res/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
+        <style>
+            p[fromModal]:hover {
+                outline: 5px solid black;
+            }
+            textarea {
+                resize: none;
+            }
+            textarea:hover {
+                outline: px solid black;
+            }
+            [id^=lettre-]:hover {
+                outline: 2px solid black;
+            }
+        </style>
+        <!-- IE8 support for HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+    </head>
+
+    <body id="page-top" class="index" data-spy="scroll" data-target=".navbar-fixed-top">
+        <div id="loading"></div>
+        <div id="content">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-fixed-top navbar-shrink text-center">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="page-scroll">
+                                <a href="#page-top"><i class="fa fa-home fa-lg"></i> Accueil</a>
+                            </li>
+                            <li class="page-scroll">
+                                <a href="#create"><i class="fa fa-rocket fa-lg"></i> Créer une lettre</a>
+                            </li>
+                            <!--
+<li class="page-scroll">
+<a href="#about"><i class="fa fa-user fa-lg"></i> About Us</a>
+</li>
+-->
+                            <!--
+<li class="page-scroll">
+<a href="#donate"><i class="fa fa-users fa-lg"></i> Donate</a>
+</li>
+-->
+                            <li class="page-scroll">
+                                <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+                            </li>
+                        </ul>
+                        <!--
+<ul class="nav navbar-nav navbar-right">
+<div id="lang-div" style="display: block; margin: auto; position: absolute; color: ghostwhite; float: right; padding: 1.5% 0;">
+<select id="lang-sel" style="background-color: transparent; border: hidden;">
+<option id="en">English</option>
+<option id="fr">French</option>
+<option id="ro">Romanian</option>
+</select><span>&#x25BC;</span>
+</div>
+</ul>
+-->
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+
+            <header class="home">
+                <div class="home_wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="intro-text">
+                                    <img src="src/img/TemplateImg/logo-main.png" alt=""/>
+
+                                    <div class="name">
+                                        <div class="flexslider">
+                                            <ul class="slides">
+                                                <li>
+                                                    A site that helps you write medical letters
+                                                </li>
+                                                <li>
+                                                    Letter formats required by french medical schools
+                                                </li>
+                                                <li>
+                                                    Is easy. Is simple. Is free
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <br>
+
+
+                                </div>
+
+                                <div class="text-center">
+                                    <div class="page-scroll menu-icon">
+                                        <a href="#create">
+                                            <i class="fa fa-angle-down fa-lg fa-border"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="create" id="create">
+                <div class="container">
+                    <div class="text-center animateup">
+                        <div class="inline-icons-text section-heading">
+                            <div class="inline-icon">
+                                <hr/><hr/><hr/><hr/><hr/>
+                            </div>
+                            <span class="inline-icon heading-width">
+                                <span class="heading-text">Créer une lettre</span>
+                            </span>
+                            <div class="inline-icon">
+                                <hr/><hr/><hr/><hr/><hr/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap-30"></div>
+                    <div class="row" style="border-bottom: 1px dashed">
+                        <div class="col col-md-6" style="border-right: 1px dashed" area="user">
+                            <center style="font-size: 25px">Mes coordonnées</center>
+                            <br />
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="gen">Civilité</label>
+                                    <select class="form-control" id="gen" onchange="refreshAll('gen')">
+                                        <option title="masculine" var="M">M.</option>
+                                        <option var="F">Mme</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-5" area="user,signature">
+                                    <label for="prenom">Prénom(s)</label>
+                                    <input type="text" class="form-control" id="prenom">
+                                </div>
+                                <div class="form-group col-md-5" area="user,signature">
+                                    <label for="nom">NOM(S)</label>
+                                    <input type="text" class="form-control" id="nom" style="text-transform:uppercase" upper="true">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="numero">No</label>
+                                    <input type="number" class="form-control" id="numero" min="1">
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <label for="rue">Nom de la rue</label>
+                                    <input type="text" class="form-control" id="rue">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="code-postal">Code postal</label>
+                                    <input type="number" class="form-control" id="code-postal">
+                                </div>
+                                <div class="form-group col-md-5" area="user,date">
+                                    <label for="localite">Ville</label>
+                                    <input type="text" class="form-control" id="localite">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="pays">Pays</label>
+                                    <!--                                    <input type="text" class="form-control" id="localite">-->
+                                    <select class="form-control" id="pays">
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="tel">Tél</label>
+                                    <input type="text" class="form-control" id="tel">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="emailc">Email</label>
+                                    <input type="email" class="form-control" id="emailc">
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        <div class="col col-md-6"></div>-->
+                        <!--                    </div>-->
+                        <!--                    <div class="row">-->
+                        <!--                        <div class="col col-md-6"></div>-->
+                        <div class="col col-md-6" area="dest">
+                            <center style="font-size: 25px">Les coordonnées du destinataire</center>
+                            <br />
+                            <div class="form-row">
+                                <div class="form-group col-md-4" area="dest,civilite,content">
+                                    <label for="civilite">Civilite</label>
+                                    <select class="form-control" id="civilite" onchange="refreshAll('civilite')">
+                                        <option>Monsieur</option>
+                                        <option>Madame</option>
+                                        <option>Madame, Monsieur</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="prenomc">Prenom(s)</label>
+                                    <input type="text" class="form-control" id="prenomc">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="nomc">NOM(S)</label>
+                                    <input type="text" class="form-control" id="nomc" style="text-transform:uppercase" upper="true">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="poste">Poste au sein de l’établissement <u>ou</u> Service</label>
+                                    <input type="text" class="form-control" id="poste">
+                                </div>
+                            </div>
+                            <!--
+<div class="form-row">
+<div class="form-group col-md-12">
+<label for="org">Nom de l’établissement</label>
+<input type="text" class="form-control" id="org">
+</div>
+</div>
+-->
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="numeroc">No</label>
+                                    <input type="number" class="form-control" id="numeroc" min="1">
+                                </div>
+                                <div class="form-group col-md-9">
+                                    <label for="ruec">Nom de la rue</label>
+                                    <input type="text" class="form-control" id="ruec">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="code-postalc">Code postal</label>
+                                    <input type="number" class="form-control" id="code-postalc">
+                                </div>
+                                <div class="form-group col-md-5" area="dest,date">
+                                    <label for="localitec">Ville</label>
+                                    <input type="text" class="form-control" id="localitec">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="paysc">Pays</label>
+                                    <!--                                    <input type="text" class="form-control" id="localite">-->
+                                    <select class="form-control" id="paysc">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col col-md-6">
+
+                        </div>
+                        <div class="col col-md-6">
+                            <div class="form-row" id="fulldate" area="date">
+                                <div class="form-group col-md-3">
+                                    <label for="date-day">Jour</label>
+                                    <input type="number" class="form-control" id="date-day" min="1" max="31">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="date-month">Mois</label>
+                                    <select class="form-control" id="date-month">
+                                        <option>janvier</option>
+                                        <option>février</option>
+                                        <option>mars</option>
+                                        <option>avril</option>
+                                        <option>mai</option>
+                                        <option>juin</option>
+                                        <option>juillet</option>
+                                        <option>août</option>
+                                        <option>septembre</option>
+                                        <option>octobre</option>
+                                        <option>novembre</option>
+                                        <option>décembre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="date-year">An</label>
+                                    <input type="number" class="form-control" id="date-year" min="2000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-6" area="objet">
+                                    <label for="objet">P.J.:</label>
+                                    <input type="text" class="form-control" id="pj" placeholder="C.V.">
+                                    <!--
+<select class="form-control" id="pj">
+<option>C.V.</option>
+<option>Autre</option>
+</select>
+-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-6" area="objet">
+                                    <label for="objet">Candidature au poste</label>
+                                    <select class="form-control" id="objet" onchange="refreshObject()">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 2em">
+                        <div class="container" id="paras" area="content">
+
+                        </div>
+                    </div>
+                </div>
+                <br /><br /><br />
+                <div class="container" area="lettre" id="lettre" style="background: white; max-width: 21cm; padding: 2cm;">
+                    <div class="row">
+                        <textarea id="lettre-user" title="Mes coordonnées" style="border: 0; width: 100%" rows="5">
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="lettre-dest" title="Les coordonnées du destinataire" style="border: 0; width: 100%; text-align: right;" rows="5">
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <input  type="text" id="lettre-date" title="Date" style="border: 0; width: 100%; text-align: right;" />
+                    </div>
+                    <div class="row">
+                        <input type="text" id="lettre-objet" title="Objet" style="border: 0; width: 100%;" />
+                    </div>
+                    <div class="row">
+                        <input type="text" id="lettre-civilite" title="Civilite" style="border: 0; width: 100%; margin-bottom: 2em" />
+                    </div>
+                    <div class="row">
+                        <textarea id="lettre-intro" title="Introduction" style="border: 0; width: 100%; margin-bottom: 1em" >
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="lettre-para1" title="Paragraphe 1" style="border: 0; width: 100%; margin-bottom: 1em" >
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="lettre-para2" title="Paragraphe 2" style="border: 0; width: 100%; margin-bottom: 1em" >
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="lettre-para3" title="Paragraphe 3" style="border: 0; width: 100%; margin-bottom: 1em" >
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="lettre-finale" title="Formule finale" style="border: 0; width: 100%;" >
+
+                        </textarea>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="lettre-signature" title="Votre signature" style="border: 0; width: 100%; text-align: right;" />
+                    </div>
+                </div>
+                <br />
+                <div class="container text-center">
+                    <button type="button" onclick="getPDF()">Générer Lettre</button>
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="text-center animateup">
+                        <div class="inline-icons-text section-heading">
+                            <div class="inline-icon">
+                                <hr/><hr/><hr/><hr/><hr/>
+                            </div>
+                            <span class="inline-icon heading-width">
+                                <span class="heading-text">Contact</span>
+                            </span>
+                            <div class="inline-icon">
+                                <hr/><hr/><hr/><hr/><hr/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gap-50"></div>
+                    <!--                    <h3 class="text-center">Send us a message and we'll reply as fast as we can</h3>-->
+                    <div class="row">
+                        <div class="col-md-7 animateright">
+                            <form role="form" action="mailto:creer.lettre@gmail.com" method="post" enctype="text/plain">
+                                <div class="form-group input-group col-xs-12 floating-label-form-group">
+                                    <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+
+                                    <label for="name">Nom</label>
+
+                                    <input class="form-control" type="text" name="name" id="name" placeholder="Nom">
+                                </div>
+                                <div class="form-group input-group col-xs-12 floating-label-form-group">
+                                    <span class="input-group-addon"> <i class="fa fa-envelope-o fa-lg"></i> </span>
+                                    <label for="email">Email</label>
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group input-group col-xs-12 floating-label-form-group message-addon">
+                                    <span class="input-group-addon"> <i class="fa fa-pencil-square-o fa-lg"></i> </span>
+                                    <label for="message">Message</label>
+                                    <textarea placeholder="Message" class="form-control" name="message" id="message" rows="5"></textarea>
+                                </div>
+
+                                <br>
+                                <div class="form-group col-xs-12">
+                                    <button type="submit" class="btn btn-default btn-lg">Envoyer</button>
+                                    <!--                                    <button type="reset" class="btn btn-default btn-lg">Reset</button>-->
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="col-md-5 animateleft contact-sidebar">
+                            <div class="inline-icons-text">
+                                <div class="inline-icon">
+                                    <div class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="inline-icon">
+                                    <div class="marker">creer.lettre@gmail.com</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="text-center">
+                <div class="footer-below">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                Copyright &copy; 2014 - ThemifyCloud
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div class="scroll-top page-scroll visible-xs visble-sm">
+                <a class="btn btn-primary" href="#page-top">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+        <!-- gallery Modals -->
+        <script src="res/js/jquery-1.10.2.js"></script>
+        <script src="res/js/query-debounce.js"></script>
+        <!--        <script src="http://benalman.com/code/projects/jquery-throttle-debounce/jquery.ba-throttle-debounce.js"></script>-->
+        <script src="res/js/bootstrap.min.js"></script>
+        <script src="res/js/bootstrap-select.min.js"></script>
+        <script type="text/javascript">
+            $('.selectpicker').selectpicker({
+            });
+        </script>
+        <script src="res/js/jquery.isotope.min.js"></script>
+        <script src="res/js/jquery.easing.js"></script>
+        <script src="res/js/classie.js"></script>
+        <script src="res/js/jquery.appear.js"></script>
+        <script src="res/js/jquery.flexslider-min.js"></script>
+        <script src="res/js/jquery.knob.js"></script>
+        <script src="res/js/countUp.min.js"></script>
+        <script src="res/js/site.js"></script>
+        <script src="res/js/data.js"></script>
+        <script src="res/js/engine.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    </body>
+</html>
